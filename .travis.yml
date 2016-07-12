@@ -1,0 +1,35 @@
+# Four build environment combinations:
+#     1) Trusty without sudo:
+dist: trusty
+
+#     2) Trusty with sudo:
+#sudo: required
+#dist: trusty
+
+#     3) Precise without sudo:
+#dist: precise
+
+#     4) Precise with sudo:
+#sudo: required
+#dist: precise
+
+language: go
+go:
+  - 1.5
+before_install:
+  - cat /proc/net/if_inet6
+  - cat /etc/network/interfaces
+  - ls -la /etc/network/interfaces.d/
+  - cat /etc/network/interfaces.d/*.cfg
+  - lsmod
+#  - sudo modprobe ipv6
+#  - sudo sh -c 'echo "auto eth0" >> /etc/network/interfaces.d/eth0.cfg'
+#  - sudo sh -c 'echo "iface eth0 inet6 auto" >> /etc/network/interfaces.d/eth0.cfg'
+#  - cat /etc/network/interfaces.d/*.cfg
+#  - sudo ifdown eth0
+#  - sudo ifup eth0
+#  - cat /proc/net/if_inet6
+#  - cat /etc/network/interfaces
+
+script:
+  - go version
