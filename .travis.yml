@@ -1,10 +1,10 @@
 # Four build environment combinations:
 #     1) Trusty without sudo:
-dist: trusty
+#dist: trusty
 
 #     2) Trusty with sudo:
-#sudo: required
-#dist: trusty
+sudo: required
+dist: trusty
 
 #     3) Precise without sudo:
 #dist: precise
