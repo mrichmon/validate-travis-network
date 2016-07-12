@@ -7,11 +7,11 @@
 #dist: trusty
 
 #     3) Precise without sudo:
-dist: precise
+#dist: precise
 
 #     4) Precise with sudo:
-#sudo: required
-#dist: precise
+sudo: required
+dist: precise
 
 language: go
 go:
