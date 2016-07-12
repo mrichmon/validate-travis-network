@@ -3,11 +3,11 @@
 #dist: trusty
 
 #     2) Trusty with sudo:
-sudo: required
-dist: trusty
+#sudo: required
+#dist: trusty
 
 #     3) Precise without sudo:
-#dist: precise
+dist: precise
 
 #     4) Precise with sudo:
 #sudo: required
